@@ -1,4 +1,50 @@
 body{
-  margin:0;
-  padding:0;
+  margin: 120px;
+  transition:  all 0.5s;
+  //gap: 53px;
+  //display: flex;
+  //flex-direction: column;
+   color: var(--text-color);
+  main{
+    gap: 53px;
+    display: flex;
+    flex-direction: column;
+
+    .welcome{
+      display: flex;
+      justify-content: center;
+      background-color: var(--background-color-block);
+      border-radius: 49px ;
+      padding: 100px;
+      transition:  all 0.5s;
+
+      .leftBlock{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 50px;
+        .title{
+          font-size: 36px;
+          font-weight: bold;
+        }
+        .subtitle{
+          font-size: 24px;
+
+        }
+      }
+    }
+    .advantages{
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      background-color: var(--background-color-block);
+      .whyMeTitle{
+        font-size: 40px;
+        font-weight: bold;
+        border-radius: 49px ;
+      }
+    }
+  }
 }
+

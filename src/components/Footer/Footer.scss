@@ -1,0 +1,22 @@
+.main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .firstBlock{
+    background-color: var(--background-color-block);
+    border-radius:26px ;
+    gap: 46px;
+    flex-direction: column;
+    display: flex;
+    .logo{
+      font-size: 20px;
+    }
+    .subtitle{
+      font-size: 20px;
+    }
+    .icon{
+      display: flex;
+      gap: 51px;
+    }
+  }
+}

@@ -5,10 +5,10 @@ import AboutPage from '../pages/AboutPage.jsx';
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />
+    element: <AboutPage />
   },
   {
-    path: '/about',
-    element: <AboutPage />
+    path: '/App',
+    element: <App />
   }
 ]);

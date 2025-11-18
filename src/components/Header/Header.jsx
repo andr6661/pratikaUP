@@ -6,28 +6,25 @@ import ThemeSwitcher from '../ThemeSwicther/ThemeSwitcher.jsx';
 const Header = () => {
 
 
-  return (
-    <header className="Header">
-      <div className="logo">
-        искра
-      </div>
-      <div className="section">
-        <nav>
-          <ul>
-            <li className="About us">О нас</li>
-            <li className="course">Курсы</li>
-            <li className="gallery">Галерея</li>
-            <li className="reviews">Отзывы</li>
-            <li className="contacts">Контакты</li>
-          </ul>
-        </nav>
-      </div>
-      <ThemeSwitcher />
-      <Button>
-        gfdgdfgdf
-      </Button>
-    </header>
-  );
+    return (
+        <header className="Header">
+            <div className="logo">
+                искра
+            </div>
+            <div className="section">
+                <nav>
+                    <ul>
+                        <li className="crumb"><a href="about">Велосипеды</a></li>
+                        <li className="crumb"><a href="course">Курсы</a></li>
+                        <li className="crumb"><a href="gallery">Галерея</a></li>
+                        <li className="crumb"><a href="reviews">Отзывы</a></li>
+                        <li className="crumb"><a href="сontacts">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <ThemeSwitcher/>
+        </header>
+    );
 };
 
 export default Header;

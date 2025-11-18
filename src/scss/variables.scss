@@ -1,9 +1,15 @@
 body[data-theme="light"] {
-  --bg-color: #fff;
+  --bg-color: #F6F8FC;
   --text-color: #333;
+  --theme-switcher: #262626;
+  --primary-button-color:#4F00F4;
+  --background-color-block: #EEF3FF;
 }
 
 body[data-theme="dark"] {
-  --bg-color: #212121;
+  --bg-color: #393939;
   --text-color: #fff;
+  --theme-switcher: #fff;
+  --primary-button-color:#4F00F4;
+  --background-color-block: #343434;
 }
