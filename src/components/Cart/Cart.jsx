@@ -3,15 +3,17 @@ import "./Cart.scss"
 import Button from "../Button/Button.jsx";
 
 const Cart = (props) => {
-    const {image, title, description, btnTitle,
+    const {
+        image, title, description,
         popularAlert = false,
-        newAlert = false} = props;
+        newAlert = false
+    } = props;
     return (
         <div className="cart">
             <aside className="alert">
                 {popularAlert ? (
                     <div className="popular">
-<p>Популярный</p>
+                        <p> Популярный</p>
                     </div>
                 ) : null}
                 {newAlert ? (
@@ -22,9 +24,9 @@ const Cart = (props) => {
             </aside>
 
             <img src={image} alt="card_image"/>
-            {title}
+            <div className="titleCart">{title} </div>
             <div className="description">{description}</div>
-            <Button>{btnTitle}</Button>
+            <Button>Открыть курс</Button>
         </div>
     );
 };

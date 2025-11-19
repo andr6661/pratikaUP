@@ -24,23 +24,103 @@ const AboutPage = () => {
                 <div className="advantages">
                     <div className="whyMeTitle">Почему выбирают нас ?</div>
                     <div className="stroke">
-                        <div><Advantages image={"/assets/icon/diplom.svg"} title = {"Гарантированный результат"}/></div>
-                        <div><Advantages image={"/assets/icon/setting.svg"} title = {"Практика вместо теории"}/></div>
-                        <div><Advantages image={"/assets/icon/calendar.svg"} title = {"Гибкий график"}/></div>
-                        <div><Advantages image={"/assets/icon/shield.svg"} title = {"Без рисков"}/></div>
+                        <div><Advantages image={"/assets/icon/diplom.svg"} title={"Гарантированный результат"}/></div>
+                        <div><Advantages image={"/assets/icon/setting.svg"} title={"Практика вместо теории"}/></div>
+                        <div><Advantages image={"/assets/icon/calendar.svg"} title={"Гибкий график"}/></div>
+                        <div><Advantages image={"/assets/icon/shield.svg"} title={"Без рисков"}/></div>
 
                     </div>
                 </div>
+                <div className="studying">
+                    <div className="titleStudying">Сейчас изучают</div>
+                    <div className="carts">
+                        <div className="firstStrokeCart">
+                            <Cart
+                                title={"Осенние рукоделки"}
+                                description={"Волшебная осень в рисунках и  поделках: 10 уютных идей в  одном курсе."}
+                                image="assets/img/cartOne.png"
+
+                            >
+                                <Button>
+                                </Button>
+                            </Cart>
+                            <Cart
+                                title={"Живая книга о динозаврах"}
+                                description={"Создайте поп-ап книгу о динозаврах за десять захватывающих уроков. \n" +
+                                    "Бесплатно с PLUS\n" +
+                                    "3990 руб.."}
+                                image="assets/img/cartTwo.png"
+
+                            >
+                                <Button>
+                                </Button>
+                            </Cart>
+                            <Cart
+                                title={"Творческие задания для детей"}
+                                description={"170+ заданий и 2 игры для развития воображения — идеально для любых детских пространств."}
+                                image="assets/img/cartThree.png"
+
+                            >
+                                <Button>
+                                </Button>
+                            </Cart>
+                            <Cart
+                                title={"Осенние рукоделки"}
+                                description={"Волшебная осень в рисунках и  поделках: 10 уютных идей в  одном курсе."}
+                                image="assets/img/cartFour.png"
+
+                            >
+                                <Button>
+                                </Button>
+                            </Cart>
+                        </div>
+                        <div className="firstStrokeCart">
+                            <Cart
+                                title={"Осенние рукоделки"}
+                                description={"Волшебная осень в рисунках и  поделках: 10 уютных идей в  одном курсе."}
+                                image="assets/img/cartOne.png"
+
+                            >
+                                <Button>
+                                </Button>
+                            </Cart>
+                            <Cart
+                                title={"Живая книга о динозаврах"}
+                                description={"Создайте поп-ап книгу о динозаврах за десять захватывающих уроков. \n" +
+                                    "Бесплатно с PLUS\n" +
+                                    "3990 руб.."}
+                                image="assets/img/cartTwo.png"
+
+                            >
+                                <Button>
+                                </Button>
+                            </Cart>
+                            <Cart
+                                title={"Творческие задания для детей"}
+                                description={"170+ заданий и 2 игры для развития воображения — идеально для любых детских пространств."}
+                                image="assets/img/cartThree.png"
+
+                            >
+                                <Button>
+                                </Button>
+                            </Cart>
+                            <Cart
+                                title={"Осенние рукоделки"}
+                                description={"Волшебная осень в рисунках и  поделках: 10 уютных идей в  одном курсе."}
+                                image="assets/img/cartFour.png"
+
+                            >
+                                <Button>
+                                </Button>
+                            </Cart>
+                        </div>
+                    </div>
+                    <div className="watchButton"><Button>Смотреть больше курсов</Button></div>
+                </div>
+                <div className="reviews">
+
+                </div>
             </main>
-            <Cart
-                title={"Осенние рукоделки"}
-                description={"Волшебная осень в рисунках и  поделках: 10 уютных идей в  одном курсе."}
-                image="assets/img/cartOne.png"
-                popularAlert={true}
-                newAlert={true}
-            >
-                <Button>wwwwww</Button>
-            </Cart>
 
         </div>
 

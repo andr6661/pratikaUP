@@ -3,9 +3,11 @@ body[data-theme="light"] {
   --text-color: #333;
   --theme-switcher: #262626;
   --primary-button-color:#4F00F4;
+  --hover-button-color:#0056b3;
   --background-color-block: #EEF3FF;
   --background-color-alertpopular:#FF9500;
   --background-color-alertNew:#00F035;
+  --color-cart-text:#929292
 }
 
 body[data-theme="dark"] {
@@ -13,7 +15,9 @@ body[data-theme="dark"] {
   --text-color: #fff;
   --theme-switcher: #fff;
   --primary-button-color:#4F00F4;
+  --hover-button-color:#0056b3;
   --background-color-block: #343434;
   --background-color-alertpopular:#FF9500;
   --background-color-alertNew:#00F035;
+  --color-cart-text:#929292
 }
