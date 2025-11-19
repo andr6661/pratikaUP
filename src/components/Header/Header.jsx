@@ -1,4 +1,3 @@
-import Button from '../Button/Button.jsx';
 import React from 'react';
 import './Header.scss';
 import ThemeSwitcher from '../ThemeSwicther/ThemeSwitcher.jsx';
@@ -14,7 +13,7 @@ const Header = () => {
             <div className="section">
                 <nav>
                     <ul>
-                        <li className="crumb"><a href="about">Велосипеды</a></li>
+                        <li className="crumb"><a href="about">О нас</a></li>
                         <li className="crumb"><a href="course">Курсы</a></li>
                         <li className="crumb"><a href="gallery">Галерея</a></li>
                         <li className="crumb"><a href="reviews">Отзывы</a></li>

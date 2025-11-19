@@ -4,6 +4,8 @@ body[data-theme="light"] {
   --theme-switcher: #262626;
   --primary-button-color:#4F00F4;
   --background-color-block: #EEF3FF;
+  --background-color-alertpopular:#FF9500;
+  --background-color-alertNew:#00F035;
 }
 
 body[data-theme="dark"] {
@@ -12,4 +14,6 @@ body[data-theme="dark"] {
   --theme-switcher: #fff;
   --primary-button-color:#4F00F4;
   --background-color-block: #343434;
+  --background-color-alertpopular:#FF9500;
+  --background-color-alertNew:#00F035;
 }

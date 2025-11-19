@@ -1,0 +1,21 @@
+.advantagesCart{
+  width:269px;
+  height:212px;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  border-radius:24px ;
+  transition: 0.3s;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  &:hover{
+    background-color: var(--bg-color);
+    border-color:var(--bg-color);
+  }
+  .titleCart{
+    font-size:24px;
+    color:var(--text-color);
+    text-align:center;
+  }
+}

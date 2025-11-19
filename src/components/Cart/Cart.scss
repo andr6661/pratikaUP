@@ -1,0 +1,36 @@
+.cart{
+  width:242px ;
+  height: 450px;
+  .alert{
+    display:flex;
+    position: relative ;
+    gap: 12px;
+  }
+  .popular{
+    width:92px ;
+    height:26px;
+    background-color: var(--background-color-alertpopular);
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+  }
+  .new{
+    width:59px ;
+    height:26px;
+    background-color: var(--background-color-alertNew);
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+  }
+  Button{
+    width:231px ;
+    height:40px;
+    color:var(--text-color);
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
