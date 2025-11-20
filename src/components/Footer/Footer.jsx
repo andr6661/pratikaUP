@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="main">
             <div className="firstBlock">
                 <div className="logo">
-                    Искра
+                    <img width='150px' height='40.24px' src="/src/icon/logo.svg" alt=""/>
                 </div>
                 <div className="subtitle">
                     Международная онлайн-школа <br/> рисования и развития креативного <br/> мышления для детей от 4 лет.

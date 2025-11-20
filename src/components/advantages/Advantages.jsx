@@ -1,10 +1,11 @@
 import React from 'react';
+import { ReactSVG } from "react-svg";
 
 const Advantages = (props) => {
     const {image, title } = props;
     return (
         <div className="advantagesCart">
-            <div className='icon'><img src={image}width="72px" height="72px" color="var(--text-color)" alt=""/></div>
+            <div className='icon'><ReactSVG src={image} /></div>
             <div className='titleCart'>{title}</div>
         </div>
     );

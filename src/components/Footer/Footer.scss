@@ -1,23 +1,54 @@
-.main{
+.main {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--text-color);
-  .firstBlock{
-    background-color: var(--background-color-block);
-    border-radius:26px ;
+  gap: 36px;
+  background-color: var(--background-color-block);
+  border-radius: 39px;
+  .firstBlock {
+
     gap: 46px;
     flex-direction: column;
     display: flex;
-    .logo{
+    width: 337px;
+    height: 349px;
+    padding: 26px;
+
+    .logo {
+
+    }
+
+    .subtitle {
       font-size: 20px;
     }
-    .subtitle{
-      font-size: 20px;
-    }
-    .icon{
+
+    .icon {
       display: flex;
       gap: 51px;
     }
+
+    .titleBold {
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .subtitle {
+      ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li{
+          padding-bottom: 20px;
+          font-size: 20px;
+          a{
+            text-decoration: none;
+            color: var(--text-color);
+          }
+        }
+      }
+    }
+
+
   }
 }

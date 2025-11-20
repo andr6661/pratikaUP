@@ -4,12 +4,19 @@ import Button from "../components/Button/Button.jsx";
 import Footer from "../components/Footer/Footer.jsx";
 import Cart from "../components/Cart/Cart.jsx";
 import Advantages from "../components/advantages/Advantages.jsx";
+import diplomSvg from './../icon/diplom.svg'
+import settingSvg from './../icon/setting.svg'
+import calendarSvg from './../icon/calendar.svg'
+import shieldSvg from './../icon/shield.svg'
+import logoSvg from './../icon/logo.svg'
+import Slider from "../components/Slider/Slider.jsx";
+import Review from "../components/Review/Review.jsx";
 
 
 const AboutPage = () => {
     return (
         <div>
-            <Header></Header>
+            <Header image={logoSvg} />
             <main>
                 <div className="welcome">
                     <div className="leftBlock">
@@ -24,10 +31,10 @@ const AboutPage = () => {
                 <div className="advantages">
                     <div className="whyMeTitle">Почему выбирают нас ?</div>
                     <div className="stroke">
-                        <div><Advantages image={"/assets/icon/diplom.svg"} title={"Гарантированный результат"}/></div>
-                        <div><Advantages image={"/assets/icon/setting.svg"} title={"Практика вместо теории"}/></div>
-                        <div><Advantages image={"/assets/icon/calendar.svg"} title={"Гибкий график"}/></div>
-                        <div><Advantages image={"/assets/icon/shield.svg"} title={"Без рисков"}/></div>
+                        <div><Advantages image={diplomSvg} title={"Гарантированный результат"}/></div>
+                        <div><Advantages image={settingSvg} title={"Практика вместо теории"}/></div>
+                        <div><Advantages image={calendarSvg} title={"Гибкий график"}/></div>
+                        <div><Advantages image={shieldSvg} title={"Без рисков"}/></div>
 
                     </div>
                 </div>
@@ -118,10 +125,15 @@ const AboutPage = () => {
                     <div className="watchButton"><Button>Смотреть больше курсов</Button></div>
                 </div>
                 <div className="reviews">
-
+                    <div className="whyMeTitle">Отзывы</div>
+                    <div className="container">
+                        {/*<Review img={"./assets/img/rew1.png"} name={'Шелмакова Варя '} old={'8 лет'} icon={"./assets/img/stars.png"} />*/}
+                    </div>
                 </div>
-            </main>
 
+                <Slider></Slider>
+            </main>
+            <Footer></Footer>
         </div>
 
     );

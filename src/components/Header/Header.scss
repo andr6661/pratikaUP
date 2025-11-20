@@ -5,8 +5,13 @@
   width: 100%;
   height: 100px;
   .logo{
-    align-items:center ;
-    display: flex;
+    width: 170px;
+    height: 40px;
+    .icon img{
+      color: var(--text-color);
+      fill: var(--text-color);
+    }
+
   }
   .section{
     nav{
@@ -27,7 +32,7 @@
   }
   .button {
     color: var(--theme-switcher);
-    background-color: var(--bg-color);
+    background:none;
     width: 30px;
     height: 30px;
     border-radius: 5px;

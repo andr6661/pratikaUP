@@ -52,7 +52,6 @@ body {
       .whyMeTitle {
         font-size: 40px;
         font-weight: bold;
-        border-radius: 49px;
       }
 
       .stroke {
@@ -96,6 +95,21 @@ body {
           width: 436px;
           height: 103px;
         }
+      }
+    }
+    .reviews{
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      display: flex;
+      background-color: var(--background-color-block);
+      gap: 51px;
+      padding: 25px;
+      border-radius: 49px;
+      height: 606px;
+      .whyMeTitle{
+        font-size: 40px;
+        font-weight: bold;
       }
     }
   }

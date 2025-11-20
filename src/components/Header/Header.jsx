@@ -1,14 +1,14 @@
 import React from 'react';
 import './Header.scss';
 import ThemeSwitcher from '../ThemeSwicther/ThemeSwitcher.jsx';
-
-const Header = () => {
-
+import { ReactSVG } from "react-svg";
+const Header = (props) => {
+    const {image } = props;
 
     return (
         <header className="Header">
             <div className="logo">
-                искра
+                <ReactSVG src={image}/>
             </div>
             <div className="section">
                 <nav>

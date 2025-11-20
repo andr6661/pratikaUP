@@ -1,0 +1,49 @@
+.slider {
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding: 100px 0 100px 0;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease;
+  width: 100%;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.slide img {
+  //width: 600px;
+  //height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Индикаторы */
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.line {
+  width: 6px;
+  height: 28px;
+  background: #cfcfcf;
+  border-radius: 3px;
+  transition: background 0.3s;
+}
+
+.line.active {
+  background: #000;
+}

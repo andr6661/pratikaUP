@@ -1,6 +1,6 @@
 Button{
   border: none;
-  background-color: var(--primary-button-color);
+  background:linear-gradient(to right, #E50DE1, #FA5D2E);
   border-radius: 16px ;
   color: white;
   width:263px ;
@@ -8,7 +8,7 @@ Button{
   font-size: 24px;
   cursor: pointer;
   &:hover{
-    background-color: var( --hover-button-color);
+    background:linear-gradient(to right, #B203AF, #FF3B00);
     transition: 0.3s;
   }
 }
