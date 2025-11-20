@@ -1,0 +1,37 @@
+.studying {
+  background-color: var(--background-color-block);
+  border-radius: 49px;
+  padding: 37px;
+  gap: 51px;
+  display: flex;
+  flex-direction: column;
+
+  .titleStudying {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    justify-self: center;
+  }
+
+  .carts {
+    display: flex;
+    flex-direction: column;
+    gap: 51px;
+
+    .firstStrokeCart {
+      display: flex;
+      gap: 46px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .watchButton {
+    text-align: center;
+
+    Button {
+      width: 436px;
+      height: 103px;
+    }
+  }
+}

@@ -7,36 +7,6 @@ body {
     gap: 53px;
     display: flex;
     flex-direction: column;
-    //transition: all 0.5s;
-    //color: var(--text-color);
-
-    .welcome {
-      display: flex;
-      justify-content: center;
-      background-color: var(--background-color-block);
-      border-radius: 49px;
-      padding: 100px;
-      transition: all 0.5s;
-
-      .leftBlock {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 50px;
-
-        .title {
-          font-size: 36px;
-          font-weight: bold;
-        }
-
-        .subtitle {
-          font-size: 24px;
-
-        }
-      }
-    }
-
     .advantages {
       justify-content: center;
       align-items: center;
@@ -97,7 +67,7 @@ body {
         }
       }
     }
-    .reviews{
+    .reviews {
       justify-content: center;
       align-items: center;
       flex-direction: column;
@@ -107,10 +77,22 @@ body {
       padding: 25px;
       border-radius: 49px;
       height: 606px;
-      .whyMeTitle{
+      overflow: hidden;
+      width: 100%;
+
+      .whyMeTitle {
         font-size: 40px;
         font-weight: bold;
       }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    }
+    .watchButton {
+      text-align: center;
     }
   }
 }

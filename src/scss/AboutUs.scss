@@ -1,0 +1,114 @@
+.history {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  .title {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color-block);
+    gap: 50px;
+
+    border-radius: 39px;
+    padding: 30px;
+    flex-direction: column;
+
+    .upBlock {
+      display: flex;
+      gap: 126px;
+      align-items: center;
+
+      .deck {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+
+        .text {
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
+    }
+    .bottomBlock{
+      display: flex;
+      align-items: center;
+      gap: 126px;
+      .deckrip{
+        font-size: 35px;
+      }
+    }
+
+  }
+  .mission{
+    border-radius: 39px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color-block);
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    padding: 16px;
+    .decsription{
+      font-size: 25px;
+      text-align: center;
+    }
+  }
+  .prin{
+    border-radius: 39px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color-block);
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    padding: 50px;
+    .title{
+    }
+    .miniCart{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+
+      .cartt {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: 1px solid ;
+
+
+        &:hover {
+          background-color: var(--bg-color);
+          border-color:var(--bg-color);
+
+        }
+        .number{
+          font-size: 35px;
+          font-weight: bold;
+        }
+        .text{
+          font-size: 30px;
+          font-weight: bold;
+        }
+        .deckCart{
+          font-size: 20px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

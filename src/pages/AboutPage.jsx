@@ -11,6 +11,8 @@ import shieldSvg from './../icon/shield.svg'
 import logoSvg from './../icon/logo.svg'
 import Slider from "../components/Slider/Slider.jsx";
 import Review from "../components/Review/Review.jsx";
+import {NavLink} from "react-router-dom";
+import Hero from "../components/Hero/Hero.jsx";
 
 
 const AboutPage = () => {
@@ -18,16 +20,7 @@ const AboutPage = () => {
         <div>
             <Header image={logoSvg} />
             <main>
-                <div className="welcome">
-                    <div className="leftBlock">
-                        <div className="title">Учим детей рисовать <br/> свое будущее!</div>
-                        <div className="subtitle">Искра — международная онлайн-школа <br/> рисования и развития
-                            креативного <br/> мышления для детей от 4 лет
-                        </div>
-                        <Button>Выбрать курс</Button>
-                    </div>
-                    <div className="image"><img src="/assets/img/bannerimg.png" alt=""/></div>
-                </div>
+                <Hero></Hero>
                 <div className="advantages">
                     <div className="whyMeTitle">Почему выбирают нас ?</div>
                     <div className="stroke">
@@ -83,20 +76,18 @@ const AboutPage = () => {
                         </div>
                         <div className="firstStrokeCart">
                             <Cart
-                                title={"Осенние рукоделки"}
-                                description={"Волшебная осень в рисунках и  поделках: 10 уютных идей в  одном курсе."}
-                                image="assets/img/cartOne.png"
+                                title={"Книжные истории"}
+                                description={"На уроках вы создадите собственные работы по мотивам любимых сюжетов, освоив необычные техники."}
+                                image="assets/img/Cart4.png"
 
                             >
                                 <Button>
                                 </Button>
                             </Cart>
                             <Cart
-                                title={"Живая книга о динозаврах"}
-                                description={"Создайте поп-ап книгу о динозаврах за десять захватывающих уроков. \n" +
-                                    "Бесплатно с PLUS\n" +
-                                    "3990 руб.."}
-                                image="assets/img/cartTwo.png"
+                                title={"Цвет в искусстве"}
+                                description={"От Харинга до Бэнкси: знакомим детей с искусством и создаём яркие работы в скетчбуке."}
+                                image="assets/img/Cart5.png"
 
                             >
                                 <Button>
@@ -104,17 +95,17 @@ const AboutPage = () => {
                             </Cart>
                             <Cart
                                 title={"Творческие задания для детей"}
-                                description={"170+ заданий и 2 игры для развития воображения — идеально для любых детских пространств."}
-                                image="assets/img/cartThree.png"
+                                description={"Миры из фантазии: создаем свои вселенные с помощью акварели, маркеров и коллажей."}
+                                image="assets/img/Cart6.png"
 
                             >
                                 <Button>
                                 </Button>
                             </Cart>
                             <Cart
-                                title={"Осенние рукоделки"}
-                                description={"Волшебная осень в рисунках и  поделках: 10 уютных идей в  одном курсе."}
-                                image="assets/img/cartFour.png"
+                                title={"Как стать дизайнером интерьера"}
+                                description={"- Узнаем про дизайн интерьера — это ремесло или искусство?  - Рассмотрим все детали: от создания светильника из пластилина до п..."}
+                                image="assets/img/Cart7.png"
 
                             >
                                 <Button>
@@ -122,16 +113,16 @@ const AboutPage = () => {
                             </Cart>
                         </div>
                     </div>
-                    <div className="watchButton"><Button>Смотреть больше курсов</Button></div>
+                    <div className="watchButton"><NavLink to={"/Course"}><Button>Смотреть больше курсов</Button></NavLink></div>
                 </div>
                 <div className="reviews">
                     <div className="whyMeTitle">Отзывы</div>
                     <div className="container">
-                        {/*<Review img={"./assets/img/rew1.png"} name={'Шелмакова Варя '} old={'8 лет'} icon={"./assets/img/stars.png"} />*/}
+                        <Slider></Slider>
                     </div>
                 </div>
+                <div className="watchButton"><NavLink to={"/Course"}><Button>Начни Творить</Button></NavLink></div>
 
-                <Slider></Slider>
             </main>
             <Footer></Footer>
         </div>

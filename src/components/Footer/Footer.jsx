@@ -1,12 +1,14 @@
 import React from 'react';
 import "./Footer.scss"
+import {NavLink} from "react-router-dom";
+import {ReactSVG} from "react-svg";
 
 const Footer = () => {
     return (
         <div className="main">
             <div className="firstBlock">
                 <div className="logo">
-                    <img width='150px' height='40.24px' src="/src/icon/logo.svg" alt=""/>
+                    <NavLink to={"/"} ><img width='150px' height='40.24px' src="/src/icon/logo.svg" alt=""/></NavLink>
                 </div>
                 <div className="subtitle">
                     Международная онлайн-школа <br/> рисования и развития креативного <br/> мышления для детей от 4 лет.
@@ -53,7 +55,7 @@ const Footer = () => {
                 </div>
                 <div className="subtitle">
                    <ul>
-                    <li>Каталог уроков</li>
+                       <li> <NavLink to={"/Course"}>Каталог уроков</NavLink></li>
                     <li>Программы</li>
                     <li>Подарочные сертификаты</li>
                     <li>Методические пособия</li>
@@ -67,7 +69,7 @@ const Footer = () => {
                 </div>
                 <div className="subtitle">
                     <ul>
-                        <li>О нас</li>
+                        <li>О<NavLink to={"/AboutUs"}> нас</NavLink></li>
                         <li>Вакансии</li>
                         <li>Пользовательское <br/>соглашение</li>
                         <li>Политика обработки<br/> персональных данных</li>

@@ -1,5 +1,5 @@
 body[data-theme="light"] {
-  --bg-color: #F6F8FC;
+  --bg-color: #ffffff;
   --text-color: #333;
   --theme-switcher: #262626;
   --primary-button-color:linear-gradient(to right, #E50DE1, #FA5D2E);
@@ -13,7 +13,7 @@ body[data-theme="light"] {
 }
 
 body[data-theme="dark"] {
-  --bg-color: #393939;
+  --bg-color: #575757;
   --text-color: #fff;
   --theme-switcher: #fff;
   --primary-button-color:linear-gradient(to right, #E50DE1, #FA5D2E);
