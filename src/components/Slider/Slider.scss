@@ -1,22 +1,38 @@
 .slider {
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
   width: 100%;
+  box-sizing: border-box;
+  padding: 10px 0;
 }
 
-.slides {
+.slider-track {
   display: flex;
-  transition: transform 0.6s ease;
-  width: 100%;
-}
-
-.slide {
-  display: flex;
-  justify-content: space-between;
   gap: 20px;
-  width: 100%;
-  flex-shrink: 0;
-  padding: 0 10px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 8px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+
+  /* Скрываем полосу прокрутки для WebKit */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Удобство: когда перетаскивают мышью — курсор 'grabbing' */
+  &.is-dragging {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    user-select: none;
+  }
+}
+
+/* обёртка слайда — гарантируем, что она не будет растягиваться */
+.slide {
+  flex: 0 0 auto;     /* очень важно */
+  min-width: 240px;   /* минимальная ширина карточки */
+  max-width: 300px;   /* по желанию */
+  scroll-snap-align: start;
   box-sizing: border-box;
 }

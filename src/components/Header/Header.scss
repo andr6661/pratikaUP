@@ -1,43 +1,112 @@
-.Header{
+.Header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 100px;
-  .logo{
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  .logo {
     width: 171px;
     height: 40px;
-    .icon img{
+
+    .icon img {
       color: var(--text-color);
       fill: var(--text-color);
     }
-
   }
-  .section{
-    nav{
+
+  .section {
+    nav {
       display: flex;
-      ul{
+
+      ul {
         list-style: none;
         display: flex;
         gap: 24px;
         padding: 0;
-        li{
-          a{
+        margin: 0;
+
+        li {
+          a {
             text-decoration: none;
             color: var(--text-color);
+            font-size: 16px;
           }
         }
       }
     }
   }
+
   .button {
     color: var(--theme-switcher);
-    background:none;
+    background: none;
     width: 30px;
-    height: 30px;
+    height: 3 Newton 0px;
     border-radius: 5px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
+  }
+
+  // Адаптация под Tablet (768–1279px)
+  @media (max-width: 1279px) and (min-width: 768px) {
+    height: 80px;
+    padding: 0 16px;
+
+    .logo {
+      width: 140px;
+      height: 34px;
+    }
+
+    .section nav ul {
+      gap: 18px;
+    }
+
+    .button {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  // Адаптация под Mobile (≤767px)
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: auto;
+    padding: 16px 16px 8px;
+    gap: 16px;
+
+    .logo {
+      width: 120px;
+      height: 30px;
+      margin-bottom: 8px;
+    }
+
+    .section {
+      width: 100%;
+
+      nav ul {
+        flex-direction: column;
+        gap: 12px;
+        padding-left: 0;
+      }
+
+      nav ul li a {
+        font-size: 15px;
+        padding: 8px 0;
+        display: block;
+      }
+    }
+
+    .button {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 26px;
+      height: 26px;
+    }
   }
 }

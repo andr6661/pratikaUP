@@ -1,15 +1,21 @@
 import React from 'react';
 import './Header.scss';
 import ThemeSwitcher from '../ThemeSwicther/ThemeSwitcher.jsx';
-import { ReactSVG } from "react-svg";
+import {ReactSVG} from "react-svg";
 import {NavLink} from "react-router-dom";
-const Header = (props) => {
-    const {image } = props;
+import {useTheme} from "../../app/ThemeContext.js";
+
+const Header = () => {
+
+    const { theme, toggleTheme } = useTheme();
 
     return (
         <header className="Header">
             <div className="logo">
-                <NavLink to={"/"} ><ReactSVG src={image}/></NavLink>
+                <NavLink to={"/"} >{theme === "light"
+                    ? <ReactSVG src="./assets/icon/colorLogo.svg" />
+                    : <ReactSVG src="./assets/icon/blackLogo.svg"/>}
+                </NavLink>
             </div>
             <div className="section">
                 <nav>
@@ -22,7 +28,7 @@ const Header = (props) => {
                     </ul>
                 </nav>
             </div>
-            <ThemeSwitcher/>
+            <ThemeSwitcher toggleTheme={toggleTheme}/>
         </header>
     );
 };

@@ -122,10 +122,10 @@ const Contact = () => {
                             <div className="map-container">
                                 <h4>Мы на карте:</h4>
                                 <div className="map-placeholder">
-
-                                    <div className="map-frame">
-                                        <img src="/api/placeholder/400/200" alt="Карта расположения"/>
-                                    </div>
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1316.0017304174323!2d43.98709502598618!3d56.30839173480007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4151d5b01e0cc807%3A0x10d94e21a7c51c54!2z0KLQoNCaINCd0LXQsdC-!5e0!3m2!1sru!2sru!4v1763701664010!5m2!1sru!2sru"
+                                        width="525" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
                             </div>
                         </div>

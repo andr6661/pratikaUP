@@ -27,6 +27,7 @@ body {
       .stroke {
         display: flex;
         gap: 23px;
+        flex-wrap: wrap;
       }
     }
 
@@ -55,6 +56,14 @@ body {
           gap: 46px;
           align-items: center;
           justify-content: center;
+          flex-wrap: wrap;
+        }
+        .secondStrokeCart {
+          display: flex;
+          gap: 46px;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
         }
       }
 

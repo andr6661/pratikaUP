@@ -1,26 +1,70 @@
-.advantagesCart{
-  width:269px;
-  height:212px;
+.advantagesCart {
+  width: 240px;
+  height: 190px;
   border: 1px solid;
   display: flex;
   flex-direction: column;
-  border-radius:24px ;
+  border-radius: 24px;
   transition: 0.3s;
   justify-content: center;
   align-items: center;
-  gap: 22px;
-  &:hover{
+  gap: 20px;
+
+  &:hover {
     background-color: var(--bg-color);
-    border-color:var(--bg-color);
-  }
-  .titleCart{
-    font-size:24px;
-    color:var(--text-color);
-    text-align:center;
+    border-color: var(--bg-color);
   }
 
-  .icon img{
+  .titleCart {
+    font-size: 24px;
+    color: var(--text-color);
+    text-align: center;
+  }
+
+  .icon img {
     color: var(--text-color);
     fill: var(--text-color);
+  }
+}
+
+/* Tablet: 768–1279px */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .advantagesCart {
+    width: 240px;
+    height: 190px;
+    gap: 18px;
+    border-radius: 20px;
+  }
+
+  .advantagesCart .titleCart {
+    font-size: 22px;
+  }
+}
+
+/* Mobile: ≤767px */
+@media (max-width: 767px) {
+  .advantagesCart {
+    width: 100%;
+    max-width: 269px;
+    height: auto;
+    padding: 16px;
+    gap: 16px;
+    border-radius: 16px;
+  }
+
+  .advantagesCart .titleCart {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .advantagesCart .icon {
+    /* Обеспечиваем пропорциональное масштабирование SVG */
+    width: 48px;
+    height: 48px;
+  }
+
+  .advantagesCart .icon svg {
+    width: 100%;
+    height: 100%;
   }
 }

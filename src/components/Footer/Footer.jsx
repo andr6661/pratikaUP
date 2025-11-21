@@ -2,13 +2,21 @@ import React from 'react';
 import "./Footer.scss"
 import {NavLink} from "react-router-dom";
 import {ReactSVG} from "react-svg";
+import {useTheme} from "../../app/ThemeContext.js";
+
 
 const Footer = () => {
+
+    const { theme} = useTheme();
+    console.log(theme);
     return (
         <div className="main">
             <div className="firstBlock">
                 <div className="logo">
-                    <NavLink to={"/"} ><img width='150px' height='40.24px' src="/src/icon/logo.svg" alt=""/></NavLink>
+                    <NavLink to={"/"} >{theme === "light"
+                        ? <ReactSVG src="./assets/icon/colorLogo.svg" />
+                        : <ReactSVG src="./assets/icon/blackLogo.svg"/>}
+                    </NavLink>
                 </div>
                 <div className="subtitle">
                     Международная онлайн-школа <br/> рисования и развития креативного <br/> мышления для детей от 4 лет.
