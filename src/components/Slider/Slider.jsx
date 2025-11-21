@@ -1,90 +1,110 @@
-import React, { useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from 'react';
 import "./Slider.scss";
-import Review from "../Review/Review.jsx";
 
-const Slider = () => {
-    const data = [
-        { id: 1, img: "./assets/img/rew1.png", name: "Шелмакова Варя", old: "8 лет" },
-        { id: 2, img: "./assets/img/rew2.png", name: "Галива Зарина", old: "7 лет" },
-        { id: 3, img: "./assets/img/rew3.png", name: "Пыльцина Злата", old: "8 лет" },
-        { id: 4, img: "./assets/img/rew4.png", name: "Гоккоева Милена", old: "12 лет" },
-        { id: 5, img: "./assets/img/rew5.png", name: "Булатова Майя", old: "5 лет" },
-        { id: 6, img: "./assets/img/rew6.png", name: "Чудинова Василиса", old: "4 года" },
-    ];
+const Slider = ({ children, slidesToShow = 1 }) => {
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [scrollLeft, setScrollLeft] = useState(0);
 
-    const trackRef = useRef(null);
+    const sliderRef = useRef(null);
+    const slides = React.Children.toArray(children);
+    const totalSlides = slides.length;
 
-    useEffect(() => {
-        const track = trackRef.current;
-        if (!track) return;
+    const handleMouseDown = (e) => {
+        setIsDragging(true);
+        setStartX(e.pageX - sliderRef.current.offsetLeft);
+        setScrollLeft(sliderRef.current.scrollLeft);
+    };
 
-        // ---- wheel -> horizontal scroll (полезно на десктопе) ----
-        const onWheel = (e) => {
-            // Если пользователь держит Shift — поведение браузера уже горизонтальное, не мешаем
-            if (e.shiftKey) return;
-            // Только если есть вертикальный вход — конвертируем в горизонт
-            if (Math.abs(e.deltaY) > 0) {
-                e.preventDefault();
-                track.scrollLeft += e.deltaY;
-            }
-        };
+    const handleMouseLeave = () => {
+        setIsDragging(false);
+    };
 
-        // ---- drag-to-scroll (mouse) ----
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+    const handleMouseUp = () => {
+        setIsDragging(false);
+    };
 
-        const onMouseDown = (e) => {
-            isDown = true;
-            track.classList.add("is-dragging");
-            startX = e.pageX - track.offsetLeft;
-            scrollLeft = track.scrollLeft;
-        };
-        const onMouseLeave = () => {
-            isDown = false;
-            track.classList.remove("is-dragging");
-        };
-        const onMouseUp = () => {
-            isDown = false;
-            track.classList.remove("is-dragging");
-        };
-        const onMouseMove = (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - track.offsetLeft;
-            const walk = (x - startX) * 1; // множитель скорости
-            track.scrollLeft = scrollLeft - walk;
-        };
+    const handleMouseMove = (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - sliderRef.current.offsetLeft;
+        const walk = (x - startX) * 2; // multiplier for faster dragging
+        sliderRef.current.scrollLeft = scrollLeft - walk;
+    };
 
-        // ---- touch: ничего дополнительного не нужно (natively scrolls) ----
+    const nextSlide = () => {
+        setCurrentSlide((prev) =>
+            prev + slidesToShow >= totalSlides ? 0 : prev + 1
+        );
+    };
 
-        track.addEventListener("wheel", onWheel, { passive: false });
-        track.addEventListener("mousedown", onMouseDown);
-        track.addEventListener("mouseleave", onMouseLeave);
-        track.addEventListener("mouseup", onMouseUp);
-        track.addEventListener("mousemove", onMouseMove);
+    const prevSlide = () => {
+        setCurrentSlide((prev) =>
+            prev === 0 ? totalSlides - slidesToShow : prev - 1
+        );
+    };
 
-        return () => {
-            track.removeEventListener("wheel", onWheel);
-            track.removeEventListener("mousedown", onMouseDown);
-            track.removeEventListener("mouseleave", onMouseLeave);
-            track.removeEventListener("mouseup", onMouseUp);
-            track.removeEventListener("mousemove", onMouseMove);
-        };
-    }, []);
+    const goToSlide = (index) => {
+        setCurrentSlide(index);
+    };
+
+    // Рассчитываем видимые слайды
+    const getVisibleSlides = () => {
+        return slides.slice(currentSlide, currentSlide + slidesToShow);
+    };
 
     return (
         <div className="slider">
-            <div className="slider-track" ref={trackRef}>
-                {data.map((item) => (
-                    <div className="slide" key={item.id}>
-                        <Review
-                            img={item.img}
-                            name={item.name}
-                            old={item.old}
-                            icon="./assets/img/stars.png"
-                        />
+            <div className="slider__container">
+                <button
+                    className="slider__button slider__button--prev"
+                    onClick={prevSlide}
+                    aria-label="Previous slide"
+                >
+                    ‹
+                </button>
+
+                <div
+                    className="slider__track"
+                    ref={sliderRef}
+                    onMouseDown={handleMouseDown}
+                    onMouseLeave={handleMouseLeave}
+                    onMouseUp={handleMouseUp}
+                    onMouseMove={handleMouseMove}
+                >
+                    <div className="slider__slides">
+                        {slides.map((slide, index) => (
+                            <div
+                                key={index}
+                                className="slider__slide"
+                                style={{
+                                    flex: `0 0 calc(100% / ${slidesToShow})`
+                                }}
+                            >
+                                {slide}
+                            </div>
+                        ))}
                     </div>
+                </div>
+
+                <button
+                    className="slider__button slider__button--next"
+                    onClick={nextSlide}
+                    aria-label="Next slide"
+                >
+                    ›
+                </button>
+            </div>
+
+            {/* Индикаторы */}
+            <div className="slider__indicators">
+                {Array.from({ length: Math.ceil(totalSlides / slidesToShow) }).map((_, index) => (
+                    <button
+                        key={index}
+                        className={`slider__indicator ${index === Math.floor(currentSlide / slidesToShow) ? 'slider__indicator--active' : ''}`}
+                        onClick={() => goToSlide(index * slidesToShow)}
+                    />
                 ))}
             </div>
         </div>

@@ -1,14 +1,58 @@
-Button{
+.button {
   border: none;
-  background:linear-gradient(to right, #E50DE1, #FA5D2E);
-  border-radius: 16px ;
+  background: linear-gradient(to right, #E50DE1, #FA5D2E);
+  border-radius: 16px;
   color: white;
-  width:263px ;
+  width: 263px;
   height: 81px;
   font-size: 24px;
   cursor: pointer;
-  &:hover{
-    background:linear-gradient(to right, #B203AF, #FF3B00);
+  font-family: inherit;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  &:hover {
+    background: linear-gradient(to right, #B203AF, #FF3B00);
     transition: 0.3s;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  /* Tablet: 768–1279px */
+  @media (max-width: 1279px) {
+    width: 220px;
+    height: 70px;
+    font-size: 20px;
+    border-radius: 14px;
+  }
+
+  /* Mobile: ≤767px */
+  @media (max-width: 767px) {
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+
+  /* Small Mobile: ≤375px */
+  @media (max-width: 375px) {
+    width: 180px;
+    height: 56px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  /* Очень маленькие экраны: ≤320px */
+  @media (max-width: 320px) {
+    width: 100%;
+    max-width: 160px;
+    height: 52px;
+    font-size: 15px;
+    border-radius: 8px;
   }
 }
