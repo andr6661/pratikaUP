@@ -54,17 +54,16 @@
   gap: 20px;
   max-width: 100%;
 
-  // Центрирование кнопки
+
   Button {
-    align-self: center; // Центрируем кнопку по горизонтали
-    margin-top: 10px; // Добавляем небольшой отступ сверху
+    align-self: center;
+    margin-top: 10px;
   }
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  // Предотвращаем переполнение
   max-width: 100%;
 
   label {
@@ -81,7 +80,6 @@
     font-size: 16px;
     transition: border-color 0.3s ease;
     font-family: inherit;
-    // Важное исправление - ограничиваем ширину
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
@@ -103,12 +101,10 @@
   flex-direction: column;
   gap: 30px;
   width: 50%;
-  // Добавляем для мобильных
   max-width: 100%;
   box-sizing: border-box;
 }
 
-// Остальные стили остаются без изменений...
 .contact-details {
   background: var(--background-color-block);
   padding: 30px;
@@ -220,13 +216,11 @@
   iframe {
     display: block;
     border-radius: 8px;
-    // Исправление для карты
     width: 100%;
     max-width: 100%;
   }
 }
 
-/* Tablet: 768–1279px */
 @media (max-width: 1279px) {
   .contacts-section {
     padding: 40px 0;
@@ -245,7 +239,6 @@
   .contact-form-wrapper,
   .contacts-info {
     width: 100%;
-    // Убираем фиксированную ширину на планшетах и мобильных
     max-width: 100%;
   }
 
@@ -261,7 +254,6 @@
   }
 }
 
-/* Mobile: ≤767px */
 @media (max-width: 767px) {
   .contacts-section {
     padding: 30px 0;
@@ -280,7 +272,6 @@
 
   .contacts-grid {
     gap: 30px;
-    // Гарантируем, что сетка не выходит за пределы
     max-width: 100%;
   }
 
@@ -290,7 +281,6 @@
   .map-container {
     padding: 20px;
     border-radius: 15px;
-    // Убираем возможные переполнения
     max-width: 100%;
     box-sizing: border-box;
   }
@@ -310,7 +300,6 @@
     input, textarea {
       padding: 10px 14px;
       font-size: 14px;
-      // Гарантируем, что инпуты не выходят за пределы
       width: 100%;
       max-width: 100%;
     }
@@ -337,7 +326,6 @@
   }
 }
 
-/* Small Mobile: ≤375px */
 @media (max-width: 375px) {
   .contacts-section {
     padding: 20px 0;

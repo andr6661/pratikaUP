@@ -23,7 +23,6 @@
     transform: scale(0.98);
   }
 
-  /* Tablet: 768–1279px */
   @media (max-width: 1279px) {
     width: 220px;
     height: 70px;
@@ -31,7 +30,6 @@
     border-radius: 14px;
   }
 
-  /* Mobile: ≤767px */
   @media (max-width: 767px) {
     width: 200px;
     height: 60px;
@@ -39,7 +37,6 @@
     border-radius: 12px;
   }
 
-  /* Small Mobile: ≤375px */
   @media (max-width: 375px) {
     width: 180px;
     height: 56px;
@@ -47,7 +44,6 @@
     border-radius: 10px;
   }
 
-  /* Очень маленькие экраны: ≤320px */
   @media (max-width: 320px) {
     width: 100%;
     max-width: 160px;

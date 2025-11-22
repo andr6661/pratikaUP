@@ -17,12 +17,12 @@ body {
       gap: 51px;
       padding: 25px;
       border-radius: 49px;
-      // Убираем фиксированную высоту и заменяем на auto
-      height: auto; // или min-height: 606px; если нужна минимальная высота
-      min-height: 606px; // сохраняем минимальную высоту
+
+      height: auto;
+      min-height: 606px;
       overflow: hidden;
       width: 100%;
-      box-sizing: border-box; // добавляем для правильного расчета размеров
+      box-sizing: border-box;
 
       .whyMeTitle {
         font-size: 40px;
@@ -44,7 +44,6 @@ body {
   }
 }
 
-/* Добавляем адаптивность */
 @media (max-width: 1279px) {
   body {
     margin: 80px;

@@ -34,7 +34,6 @@ const Header = () => {
                 <span></span>
             </div>
 
-            {/* Основное меню */}
             <div className={`section ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
                 <nav>
                     <ul>

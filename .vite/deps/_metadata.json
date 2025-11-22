@@ -7,25 +7,25 @@
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "28f1128c",
+      "fileHash": "2eb2649d",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "7bdfc6b7",
+      "fileHash": "e8643850",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "b576a192",
+      "fileHash": "92aa2a7d",
       "needsInterop": false
     },
     "react-svg": {
       "src": "../../node_modules/react-svg/dist/react-svg.esm.js",
       "file": "react-svg.js",
-      "fileHash": "7e601423",
+      "fileHash": "228bd27d",
       "needsInterop": false
     }
   },
