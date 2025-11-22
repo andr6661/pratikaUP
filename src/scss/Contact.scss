@@ -6,6 +6,9 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    // Добавляем ограничение по ширине для контейнера
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .section-title {
@@ -22,6 +25,9 @@
   justify-content: center;
   gap: 50px;
   align-items: start;
+  // Добавляем для предотвращения переполнения
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-form-wrapper {
@@ -30,6 +36,9 @@
   border-radius: 20px;
   width: 50%;
   transition: 0.5s;
+  // Исправление для мобильных
+  max-width: 100%;
+  box-sizing: border-box;
 
   h3 {
     margin-bottom: 25px;
@@ -43,11 +52,20 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 100%;
+
+  // Центрирование кнопки
+  Button {
+    align-self: center; // Центрируем кнопку по горизонтали
+    margin-top: 10px; // Добавляем небольшой отступ сверху
+  }
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
+  // Предотвращаем переполнение
+  max-width: 100%;
 
   label {
     margin-bottom: 8px;
@@ -63,6 +81,10 @@
     font-size: 16px;
     transition: border-color 0.3s ease;
     font-family: inherit;
+    // Важное исправление - ограничиваем ширину
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 
     &:focus {
       outline: none;
@@ -81,8 +103,12 @@
   flex-direction: column;
   gap: 30px;
   width: 50%;
+  // Добавляем для мобильных
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
+// Остальные стили остаются без изменений...
 .contact-details {
   background: var(--background-color-block);
   padding: 30px;
@@ -194,6 +220,9 @@
   iframe {
     display: block;
     border-radius: 8px;
+    // Исправление для карты
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -216,6 +245,8 @@
   .contact-form-wrapper,
   .contacts-info {
     width: 100%;
+    // Убираем фиксированную ширину на планшетах и мобильных
+    max-width: 100%;
   }
 
   .contact-form-wrapper,
@@ -237,6 +268,8 @@
 
     .container {
       padding: 0 15px;
+      // Убираем лишние отступы на мобильных
+      max-width: 100%;
     }
 
     .section-title {
@@ -247,6 +280,8 @@
 
   .contacts-grid {
     gap: 30px;
+    // Гарантируем, что сетка не выходит за пределы
+    max-width: 100%;
   }
 
   .contact-form-wrapper,
@@ -255,6 +290,9 @@
   .map-container {
     padding: 20px;
     border-radius: 15px;
+    // Убираем возможные переполнения
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .contact-form-wrapper h3,
@@ -272,6 +310,9 @@
     input, textarea {
       padding: 10px 14px;
       font-size: 14px;
+      // Гарантируем, что инпуты не выходят за пределы
+      width: 100%;
+      max-width: 100%;
     }
   }
 

@@ -125,8 +125,8 @@
     }
 
     .button {
-      width: 28px;
-      height: 28px;
+      width: 34px;
+      height: 34px;
     }
   }
 
@@ -162,6 +162,7 @@
 
       &.mobile-open {
         transform: translateX(0);
+        background-color: var(--background-color-block);
       }
 
       nav ul {
@@ -191,8 +192,8 @@
       position: absolute;
       top: 20px;
       right: 60px;
-      width: 26px;
-      height: 26px;
+      width: 34px;
+      height: 34px;
     }
   }
 
@@ -214,8 +215,8 @@
     .button {
       top: 16px;
       right: 50px;
-      width: 24px;
-      height: 24px;
+      width: 34px;
+      height: 34px;
     }
 
     .section {

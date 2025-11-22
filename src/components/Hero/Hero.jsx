@@ -13,7 +13,7 @@ const Hero = () => {
                     </div>
                     <NavLink to={"/Course"}><Button>Выбрать курс</Button></NavLink>
                 </div>
-                <div className="image"><img src="/assets/img/bannerimg.png" alt=""/></div>
+                <div className="image"><img src="https://github.com/andr6661/pratikaUP/blob/gh-pages/assets/img/bannerimg.png" alt=""/></div>
             </div>
         </div>
     );

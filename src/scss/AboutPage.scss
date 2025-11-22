@@ -17,13 +17,18 @@ body {
       gap: 51px;
       padding: 25px;
       border-radius: 49px;
-      height: 606px;
+      // Убираем фиксированную высоту и заменяем на auto
+      height: auto; // или min-height: 606px; если нужна минимальная высота
+      min-height: 606px; // сохраняем минимальную высоту
       overflow: hidden;
       width: 100%;
+      box-sizing: border-box; // добавляем для правильного расчета размеров
 
       .whyMeTitle {
         font-size: 40px;
         font-weight: bold;
+        text-align: center;
+        margin: 0;
       }
 
       .container {
@@ -32,9 +37,73 @@ body {
         margin: 0 auto;
       }
     }
-    .watchButton {
+
+    .start-button-wrapper {
       text-align: center;
     }
   }
 }
 
+/* Добавляем адаптивность */
+@media (max-width: 1279px) {
+  body {
+    margin: 80px;
+
+    main {
+      gap: 40px;
+
+      .reviews {
+        gap: 40px;
+        padding: 20px;
+        border-radius: 32px;
+        min-height: 500px;
+
+        .whyMeTitle {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    margin: 60px 20px;
+
+    main {
+      gap: 30px;
+
+      .reviews {
+        gap: 30px;
+        padding: 20px 15px;
+        border-radius: 24px;
+        min-height: 400px;
+
+        .whyMeTitle {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    margin: 40px 15px;
+
+    main {
+      gap: 25px;
+
+      .reviews {
+        gap: 25px;
+        padding: 15px 10px;
+        border-radius: 20px;
+        min-height: 350px;
+
+        .whyMeTitle {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
